@@ -29,6 +29,10 @@
         line-height: 56px;
         font-weight: 800;
         text-align: center;
+        
+        span {
+            display: block;
+        }
     }
 
     @media (max-width: vars.$bpMobile) {
