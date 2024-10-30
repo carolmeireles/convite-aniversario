@@ -1,0 +1,30 @@
+@use '../vars';
+
+.button {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+
+    &--primary {
+        color: vars.$textColor;
+        background-color: vars.$purple2;
+
+        &:hover {
+            background-color: vars.$purple1;
+        }
+    }
+
+    @media (max-width: vars.$bpMobile) {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    @media (max-width: vars.$bpLaptop) {
+        display: flex;
+        align-items: center;
+    }
+}

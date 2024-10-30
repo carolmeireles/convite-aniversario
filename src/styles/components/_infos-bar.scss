@@ -1,0 +1,44 @@
+@use '../vars';
+
+.infos-bar {
+    padding: 16px 24px;
+    background-color: vars.$textColor;
+    display: flex;
+    justify-content: space-between;
+
+    &__infos {
+        display: flex;
+        gap: 40px;
+
+        &__item {
+            font-size: 14px;
+            color: vars.$secondTextColor;
+
+            span {
+                font-size: 18px;
+                display: block;
+                color: vars.$secondTextColor;
+                font-weight: bold;
+            }
+        }
+    }
+
+    @media (max-width: vars.$bpMobile) {
+        display: block;
+
+        &__infos {
+            display: block;
+
+            &__item {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    @media (max-width: vars.$bpLaptop) {
+
+        &__infos {
+            gap: 16px;
+        }
+    }
+}
