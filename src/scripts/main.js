@@ -15,7 +15,7 @@ const counter = setInterval(function() {
     const eventDays = Math.floor(eventGap / day);
     const eventHours = Math.floor((eventGap % day) / hour);
     const eventMinutes = Math.floor((eventGap % hour) / minutes);
-    const eventSeconds = Math.floor((eventGap & minutes) / 1000);
+    const eventSeconds = Math.floor((eventGap % minutes) / 1000);
 
     const contador = document.getElementById('contador');
     contador.innerHTML = `${eventDays} : ${eventHours} : ${eventMinutes} : ${eventSeconds}`;
